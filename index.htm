@@ -75,78 +75,27 @@ p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxS
     font-size: 11pt;
     font-family: "Calibri", sans-serif;
 }
- /* List Definitions */
+/* Светлая тема */
+:root {
+    --bg-color: #ffffff;          /* Белый фон сайта */
+    --text-color: #111111;        /* Почти черный текст */
+    --panel-bg: #f9f9f9;          /* Светло-серая плашка ответа */
+    --link-color: #00115C;        /* Синий цвет ссылок */
+    --border-color: #00115C;      /* Синяя полоса слева */
+}
+/* Автоматическое переключение на Темную тему */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;      /* Темно-серый фон сайта */
+        --text-color: #e0e0e0;    /* Светло-серый текст */
+        --panel-bg: #2d2d2d;      /* Темная плашка ответа */
+        --link-color: #4da6ff;    /* Светло-синий цвет ссылок (чтобы читался на темном) */
+        --border-color: #4da6ff;  /* Светло-синяя полоса */
+    }
+}
 
-@list l0:level1
-	{margin-left:20.25pt;
-	text-indent:-18.0pt;}
-@list l0:level2
-	{margin-left:56.25pt;
-	text-indent:-18.0pt;}
-@list l0:level3
-	{margin-left:92.25pt;
-	text-indent:-9.0pt;}
-@list l0:level4
-	{margin-left:128.25pt;
-	text-indent:-18.0pt;}
-@list l0:level5
-	{margin-left:164.25pt;
-	text-indent:-18.0pt;}
-@list l0:level6
-	{margin-left:200.25pt;
-	text-indent:-9.0pt;}
-@list l0:level7
-	{margin-left:236.25pt;
-	text-indent:-18.0pt;}
-@list l0:level8
-	{margin-left:272.25pt;
-	text-indent:-18.0pt;}
-@list l0:level9
-	{margin-left:308.25pt;
-	text-indent:-9.0pt;}
+ol, ul {margin-bottom: 0;}
 
-@list l1:level1
-	{text-indent:-18.0pt;}
-@list l1:level2
-	{text-indent:-18.0pt;}
-@list l1:level3
-	{text-indent:-9.0pt;}
-@list l1:level4
-	{text-indent:-18.0pt;}
-@list l1:level5
-	{text-indent:-18.0pt;}
-@list l1:level6
-	{text-indent:-9.0pt;}
-@list l1:level7
-	{text-indent:-18.0pt;}
-@list l1:level8
-	{text-indent:-18.0pt;}
-@list l1:level9
-	{text-indent:-9.0pt;}
-
-@list l2:level1
-	{text-indent:-18.0pt;}
-@list l2:level2
-	{text-indent:-18.0pt;}
-@list l2:level3
-	{text-indent:-9.0pt;}
-@list l2:level4
-	{text-indent:-18.0pt;}
-@list l2:level5
-	{text-indent:-18.0pt;}
-@list l2:level6
-	{text-indent:-9.0pt;}
-@list l2:level7
-	{text-indent:-18.0pt;}
-@list l2:level8
-	{text-indent:-18.0pt;}
-@list l2:level9
-	{text-indent:-9.0pt;}
-ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
 </style>
 
 </head>
@@ -156,7 +105,7 @@ word-wrap:break-word'>
 
 <div class=WordSection1>
 
-<p style="text-align: justify;">Домашние задачи</p>
+<p style="text-align: justify; margin-bottom: 28pt">Домашние задачи</p>
 
 <p style="text-align: justify; margin-left: 6pt;">
     1. Найти все термы, которые порождает электронная конфигурация <i>d<sup>2</sup></i>.
@@ -165,9 +114,9 @@ word-wrap:break-word'>
     2. Найти вырождение электронной конфигурации <i>f<sup>2</sup></i>, ее основной терм и его расщепление за счет спин-орбитального взаимодействия.
 </p>
 <!-- Блок с комментарием cursor: pointer; font-weight: bold;-->
-<details style="margin-left: 28pt; margin-bottom: 6pt; color: #555;">
-    <summary style="color: #00115C; cursor: pointer;">Комментарий</summary>
-    <div style="margin-top: 2pt; background-color: #f9f9f9; padding: 8pt; border-left: 3px solid #00115C;">
+<details style="margin-left: 28pt; margin-bottom: 6pt;">
+    <summary style="color: var(--link-color); cursor: pointer;">Комментарий</summary>
+    <div style="margin-top: 2pt; background-color: var(--panel-bg); padding: 8pt; border-left: 3px solid var(--border-color);">
         Когда пишут о расщеплении спин-орбитального взаимодействия, то имеют в виду переход от термов к мультиплетам.
     </div>
 </details>
@@ -175,9 +124,9 @@ word-wrap:break-word'>
     3. Найти электронную конфигурацию, соответствующую терму <sup>9</sup>G (речь про основное состояние).
 </p>
 <!-- Блок с комментарием -->
-<details style="margin-left: 28pt; margin-bottom: 6pt; color: #555;">
-    <summary style="color: #00115C; cursor: pointer">Комментарий</summary>
-    <div style="margin-top: 2pt; background-color: #f9f9f9; padding: 8pt; border-left: 3px solid #00115C;">
+<details style="margin-left: 28pt; margin-bottom: 6pt;">
+    <summary style="color: var(--link-color); cursor: pointer">Комментарий</summary>
+    <div style="margin-top: 2pt; background-color: var(--panel-bg); padding: 8pt; border-left: 3px solid var(--border-color);">
        Тонкость задачи в том, чтобы найти L. Основное состояние соответствует максимальным S и L. В прямой задаче (поиск терма по конфигурации) для электронной конфигурации, например, 2<i>p<sup>2</sup></i> мы рассаживали электроны по ячейкам и складывали проекции ячеек. Тут ситуация такая же – надо понять, как будут рассажены электроны и сложить в общем виде проекции ячеек. Поможет формула алгебраической прогрессии. 
     </div>
 </details>
