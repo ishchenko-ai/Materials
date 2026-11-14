@@ -2,79 +2,13 @@
 <head>
 <meta charset="windows-1251">
 <style>
+
 /* Font Definitions */
 @font-face {font-family: "Cambria Math";
 }
-@font-face {
-    font-family: "Calibri";
+@font-face {font-family: "Calibri";
 }
- /* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 8pt;
-    margin-left: 0;
-    line-height: 107%;
-    font-size: 11pt;
-    font-family: "Calibri", sans-serif;
-}
-p.MsoHeader, li.MsoHeader, div.MsoHeader {
-    margin: 0;
-    font-size: 11pt;
-    font-family: "Calibri", sans-serif;
-}
-p.MsoFooter, li.MsoFooter, div.MsoFooter {
-    margin: 0;
-    font-size: 11pt;
-    font-family: "Calibri", sans-serif;
-}
-a:link, span.MsoHyperlink {
-    color: #0563c1;
-    text-decoration: underline;
-}
-a:visited, span.MsoHyperlinkFollowed {
-    color: #954f72;
-    text-decoration: underline;
-}
-span.MsoPlaceholderText {
-    color: gray;
-}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 8pt;
-    margin-left: 36pt;
-    line-height: 107%;
-    font-size: 11pt;
-    font-family: "Calibri", sans-serif;
-}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 36pt;
-    line-height: 107%;
-    font-size: 11pt;
-    font-family: "Calibri", sans-serif;
-}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 36pt;
-    line-height: 107%;
-    font-size: 11pt;
-    font-family: "Calibri", sans-serif;
-}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 8pt;
-    margin-left: 36pt;
-    line-height: 107%;
-    font-size: 11pt;
-    font-family: "Calibri", sans-serif;
-}
+/* Style Definitions */
 /* Светлая тема */
 :root {
     --bg-color: #ffffff;          /* Белый фон сайта */
@@ -94,15 +28,88 @@ p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxS
     }
 }
 
+p.MsoNormal, li.MsoNormal, div.MsoNormal {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 8pt;
+    margin-left: 0;
+    line-height: 107%;
+    font-size: 11pt;
+    font-family: "Calibri", sans-serif;
+    color: var(--text-color); /* Привязываем цвет обычного текста */
+}
+p.MsoHeader, li.MsoHeader, div.MsoHeader {
+    margin: 0;
+    font-size: 11pt;
+    font-family: "Calibri", sans-serif;
+    color: var(--text-color);
+}
+p.MsoFooter, li.MsoFooter, div.MsoFooter {
+    margin: 0;
+    font-size: 11pt;
+    font-family: "Calibri", sans-serif;
+    color: var(--text-color);
+}
+a:link, span.MsoHyperlink {
+    color: var(--link-color); /* Теперь ссылка будет светлой в темной теме */
+    text-decoration: underline;
+}
+a:visited, span.MsoHyperlinkFollowed {
+    color: var(--link-color); /* Чтобы посещенные ссылки тоже не сливались с фоном */
+    text-decoration: underline;
+}
+span.MsoPlaceholderText {
+    color: gray;
+}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 8pt;
+    margin-left: 36pt;
+    line-height: 107%;
+    font-size: 11pt;
+    font-family: "Calibri", sans-serif;
+    color: var(--text-color);
+}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 36pt;
+    line-height: 107%;
+    font-size: 11pt;
+    font-family: "Calibri", sans-serif;
+    color: var(--text-color);
+}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 36pt;
+    line-height: 107%;
+    font-size: 11pt;
+    font-family: "Calibri", sans-serif;
+    color: var(--text-color);
+}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 8pt;
+    margin-left: 36pt;
+    line-height: 107%;
+    font-size: 11pt;
+    font-family: "Calibri", sans-serif;
+    color: var(--text-color);
+}
+
 ol, ul {margin-bottom: 0;}
 
 </style>
 
 </head>
 
-<body lang=RU link="#0563C1" vlink="#954F72" style='tab-interval:35.4pt;
-word-wrap:break-word'>
-
+<body lang=RU>
+    
 <div class=WordSection1>
 
 <p style="text-align: justify; margin-bottom: 28pt">Домашние задачи</p>
